@@ -4,7 +4,7 @@ If this is your first time setup, please skip to
 - [Setup](#setup)
 
 ## Instructions
-1. Expand the cache folder. Click on siteListTodo.json (this file can be opened with notepad). 
+1. Expand the cache folder. Click and open on siteListTodo.json (this file can be opened with notepad). 
 2. Change the numbers to the associated number of times you wish to collect from a site. the key is listed in the file keys.md in the same folder (cache).
 3. Save and close siteListTodo.json.
 4. Run clientCLI.exe.
