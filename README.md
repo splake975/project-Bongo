@@ -1,5 +1,10 @@
 # Project Bongo
 
+## Requirements
+ - You must be on windows 10 or 11
+ - You must have Google Chrome
+
+
 If this is your first time setup, please skip to 
 - [Setup](#setup)
 
