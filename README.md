@@ -18,7 +18,9 @@ If this is your first time setup, please skip to
 This should run until complete. 
 If any errors occur, please contact me and record the error log either through a screenshot or a copy paste of the message. 
 
-
+## Accessing collected data
+1. Open the folder labeled "codes"
+2. The latest session's data should be in the most recent folder. 
 
 
 
