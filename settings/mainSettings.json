@@ -1,0 +1,9 @@
+{
+    "offlineURI": "ws://localhost:443",
+    "mainURI": "wss://project-bongo.onrender.com:443",
+    "scrollPixels": 133,
+    "profilePath": "./CodeCollectProfile",
+    "testing": 0,
+    "OCR": 1,
+    "compiled": 1
+}
