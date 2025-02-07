@@ -3,6 +3,7 @@
 ## Requirements
  - You must be on windows 10 or 11
  - You must have Google Chrome
+ - It is highly recommended that you have an intel processor above the haswell series. (Ignore this if your computer was made within the past decade)
 
 
 If this is your first time setup, please skip to 
