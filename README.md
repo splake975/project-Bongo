@@ -18,15 +18,16 @@ If any errors occur, please contact me and record the error log either through a
 
 ## Setup
 
-1. Run setup.exe. Wait for the screen to clear and prompts you to enter your Username and API key. 
-2. Create accounts for each site you wish. **DO NOT USE THE GOOGLE OPTION**. Use the native log in when signing up. Using a gmail is okay for this. 
-3. (Optional but highly recommended) Create a burner Google account. This will be used to store your passwords on chrome. 
-4. Run the startChrome.exe as admininstrator by right clicking and selecting "run as administrator" and clicking Yes to the prompt. Log into Chrome with your burner Google account from the prior step. 
-5. Log into each website you have created an account for and **SAVE THE PASSWORDS TO CHROME**. The program will try to use these to log in when you are logged out for any reason.
-6. Close the chrome window. Reopen startChrome.exe and see if your passwords have been saved. 
-7. Navigate to [https://clickspeedtest.com/scroll-test.html](https://clickspeedtest.com/scroll-test.html). Use your scroll wheel and scroll down ONCE. Record the number into the file ./settings/mainSettings.json (the file can be opened with notepad). replace the value 133 with your recorded value (it may be 133 in which case leave it alone). 
-8. Save and close the file.
-9. Close all chrome instances opened through this app.
+1. Run setup.exe. 
+2. Run setup.exe again. Wait for the screen to clear and prompts you to enter your Username and API key. 
+3. Create accounts for each site you wish. **DO NOT USE THE GOOGLE OPTION**. Use the native log in when signing up. Using a gmail is okay for this. 
+4. (Optional but highly recommended) Create a burner Google account. This will be used to store your passwords on chrome. 
+5. Run the startChrome.exe as admininstrator by right clicking and selecting "run as administrator" and clicking Yes to the prompt. Log into Chrome with your burner Google account from the prior step. 
+6. Log into each website you have created an account for and **SAVE THE PASSWORDS TO CHROME**. The program will try to use these to log in when you are logged out for any reason.
+7. Close the chrome window. Reopen startChrome.exe and see if your passwords have been saved. 
+8. Navigate to [https://clickspeedtest.com/scroll-test.html](https://clickspeedtest.com/scroll-test.html). Use your scroll wheel and scroll down ONCE. Record the number into the file ./settings/mainSettings.json (the file can be opened with notepad). replace the value 133 with your recorded value (it may be 133 in which case leave it alone). 
+9. Save and close the file.
+10. Close all chrome instances opened through this app.
 
 
 Your setup is now complete. Return to [instructions](#instructions).
