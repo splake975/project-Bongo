@@ -14,9 +14,14 @@ If this is your first time setup, please skip to
 2. Change the numbers to the times you wish to collect from a site. the abbreviation key is listed in the file keys.md in the same folder (cache).
 3. Save and close siteListTodo.json.
 4. Run client.exe as admin. (Right mouse click, run as admin. If you get a prompt saying windows does not recognize this file, __more info__, then click run anyway. Then Click yes to the administrator prompt)
+5. Wait for the prompt to say OCR Server started. Press enter until chrome opens. 
 
 This should run until complete. 
 If any errors occur, please contact me and record the error log either through a screenshot or a copy paste of the message. 
+
+## Additional notes
+When the program is running and is idle (waiting for the next time to collect code) chrome will default back to the chrome welcome page. This is expected behavior.
+
 
 ## Accessing collected data
 1. Open the folder labeled "codes"
