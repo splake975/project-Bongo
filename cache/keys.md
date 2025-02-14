@@ -4,3 +4,4 @@
 |Chumba Casino|cb|
 |McLuck|ml|
 |Global Poker|gp|
+|Pulsz|pz|
