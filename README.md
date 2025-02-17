@@ -4,8 +4,6 @@
  - You must be on windows 10 or 11
  - You must have Google Chrome
  - It is highly recommended that you have an intel processor newer than or equal to the haswell series. (Ignore this if your computer was made within the past decade)
- - Set the sleep timer to Never sleep on your computer.
- - Only connect 1 monitor. (If you have multiple, it still works but requires additional setup.)
 
 
 If this is your first time setup, please skip to 
@@ -53,5 +51,3 @@ If any errors occur, please contact me and record the error log either through a
 
 
 Your setup is now complete. Return to [instructions](#instructions).
-
-## How to make your computer never sleep
