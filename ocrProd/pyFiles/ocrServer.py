@@ -25,15 +25,28 @@ def remove_transparency(image):
     else:
         return image
 
+# def load_image_from_data_uri(data_uri):
+#     """
+#     Load an image from a data URI.
+#     """
+#     # Extract the base64-encoded image data
+#     header, encoded = data_uri.split(",", 1)
+#     image_data = base64.b64decode(encoded)
+
+#     # Load the image using PIL
+#     image = Image.open(BytesIO(image_data))
+#     return image
+
 def load_image_from_data_uri(data_uri):
     """
     Load an image from a data URI.
     """
-    # Extract the base64-encoded image data
+    if "," not in data_uri:
+        raise ValueError("Invalid data URI format")
+
     header, encoded = data_uri.split(",", 1)
     image_data = base64.b64decode(encoded)
 
-    # Load the image using PIL
     image = Image.open(BytesIO(image_data))
     return image
 
@@ -72,7 +85,7 @@ class OCRRequestHandler(http.server.BaseHTTPRequestHandler):
 
         # Check if the 'image_uri' parameter is provided
         if "image_uri" not in query_params:
-            self.send_error(400, json.dumps({"status": "error", "message": "Missing 'image_uri' parameter"}))
+            self.send_json_error(400, json.dumps({"status": "error", "message": "Missing 'image_uri' parameter"}))
             return
 
         # Get the image URI from the query parameters
@@ -134,10 +147,18 @@ class OCRRequestHandler(http.server.BaseHTTPRequestHandler):
             self.wfile.write(json.dumps(response).encode("utf-8"))
 
         except FileNotFoundError:
-            self.send_error(404, json.dumps({"status": "error", "message": "Image file not found"}))
+            self.send_json_error(404, json.dumps({"status": "error", "message": "Image file not found"}))
         except Exception as e:
             # Handle other errors
-            self.send_error(500, json.dumps({"status": "error", "message": f"Error processing image: {str(e)}"}))
+            self.send_json_error(500, json.dumps({"status": "error", "message": f"Error processing image: {str(e)}"}))
+
+    def send_json_error(self, status_code, message):
+        self.send_response(status_code)
+        self.send_header("Content-Type", "application/json")
+        self.end_headers()
+        self.wfile.write(json.dumps({"status": "error", "message": message}).encode("utf-8"))
+
+
 
 def run_server(port=8000):
     # Start the HTTP server
@@ -154,4 +175,5 @@ if __name__ == "__main__":
     # curl "http://localhost:8000/?image_uri=cache/globalpokercode.png"
 
     # doesnt really work with base64 rn
+        # untested base64 fix 2/19
     
