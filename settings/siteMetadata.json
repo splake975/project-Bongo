@@ -2,7 +2,7 @@
     "cp":{"cd":15},
     "pz":{"cd":5},
     "sk":{"cd":5},
-    "cb":{"cd":5},
+    "cb":{"cd":5,"login":"native"},
     "wv":{
         "cd":5,
         "email":"example@doman.com"
