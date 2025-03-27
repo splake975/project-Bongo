@@ -5,3 +5,4 @@
 |McLuck|ml|
 |Global Poker|gp|
 |Pulsz|pz|
+|Modo|md|
