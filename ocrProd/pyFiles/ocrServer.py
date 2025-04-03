@@ -10,6 +10,7 @@ import requests
 import os
 from PIL import Image
 import base64
+import subprocess
 
 # Initialize EasyOCR reader
 reader = easyocr.Reader(["en"])
@@ -158,9 +159,33 @@ class OCRRequestHandler(http.server.BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(json.dumps({"status": "error", "message": message}).encode("utf-8"))
 
+def kill_existing_server(port=8000):
+    try:
+        # Run netstat to find the process using the port
+        result = subprocess.run(
+            f'netstat -ano | findstr :{port}',
+            shell=True,
+            capture_output=True,
+            text=True
+        )
 
+        if result.stdout:
+            # Extract the PID from the output
+            lines = result.stdout.strip().split("\n")
+            for line in lines:
+                parts = line.split()
+                if len(parts) >= 5:
+                    pid = parts[-1]
+                    print(f"Killing process with PID: {pid} on port {port}")
+                    os.system(f"taskkill /PID {pid} /F")
+        else:
+            print(f"No process found using port {port}")
+
+    except Exception as e:
+        print(f"Error: {e}")
 
 def run_server(port=8000):
+    kill_existing_server()
     # Start the HTTP server
     with socketserver.TCPServer(("", port), OCRRequestHandler) as httpd:
         print(f"Serving on port {port}...")
