@@ -12,5 +12,5 @@
     "test":{"cd":0},
     "test2":{"cd":0},
     "failTest":{"cd":0},
-    "md":{"cd":5,"login":"native","email":""}
+    "md":{"cd":3.5,"login":"native","email":""}
 }
