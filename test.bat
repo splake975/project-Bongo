@@ -1,4 +1,4 @@
-# @echo off
+@REM @echo off
 :: Check if running as admin
 net session >nul 2>&1
 if %errorlevel% neq 0 (
@@ -12,4 +12,5 @@ cd /d "%~dp0"
 
 :: Your commands here
 echo Running in %cd%
-pause
+@REM start "" cmd "client.exe > errorlogs.txt 2>&1"
+client.exe > errorlogs.txt 2>&1
