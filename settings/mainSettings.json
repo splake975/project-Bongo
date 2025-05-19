@@ -5,5 +5,6 @@
     "profilePath": "./CodeCollectProfile",
     "testing": 0,
     "OCR": 1,
-    "compiled": 1
+    "compiled": 1,
+    "legalName":""
 }

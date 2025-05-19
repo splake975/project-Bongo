@@ -6,3 +6,4 @@
 |Global Poker|gp|
 |Pulsz|pz|
 |Modo|md|
+|Kickr|kr|
